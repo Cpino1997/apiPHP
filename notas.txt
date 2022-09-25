@@ -1,0 +1,18 @@
+
+Iniciando el proyecto:
+    $ symfony new nombreProyecto // CREACION DEL PROYECTO
+    $ cd nombreProyecto // INGRESAMOS A LA CARPETA
+    $ composer require symfony/orm-pack // integramos orm-pack que es el mapper de relaciones en symfony
+    $ composer require annotations // endpoints y control del api tipo @RestController
+    $ composer require symfony/maker-bundle --dev // creador de clases.
+
+Creacion de entidades:
+    $ bin/console make:entity // creacion de entity, controller y metodos.
+    $ php bin/console make:migration // enviamos el creador de tablas a la bdninphp
+    $ php bin/console doctrine:migrations:migrate // guardamos los datos en la bd
+
+Securitizacion del Api:
+    $ composer require symfony/security-bundle // integramos el paquete de seguridad
+    $ php bin/console make:user // creamos al usuario
+    $ php bin/console make:migration //actualizamos
+    $ php bin/console doctrine:migrations:migrate // otravez
